@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title><%= @title %></title>
+    <link rel='stylesheet' href='/style.css'/>
+  </head>
+  <body>
+    <h1><%= @title %></h1>
+    <div class="content">
+      <h2><%= @message %></h2>
+      <ul>
+      <% @endpoints.each do |endpoint| %>
+        <li>
+          <h3><%= endpoint[:name] +' - '+ endpoint[:path] %></h3>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  </body>
+</html>
